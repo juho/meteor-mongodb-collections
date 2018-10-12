@@ -57,6 +57,42 @@ class Collection {
 
   }
 
+  async updateOne(query, operation, options) {
+
+    this._getCollection();
+    try {
+      return await this.collection.updateOne(query, operation, options);
+    }
+    catch (e) {
+      throw e;
+    }
+
+  }
+
+  async updateMany(query, operation, options) {
+
+    this._getCollection();
+    try {
+      return await this.collection.updateMany(query, operation, options);
+    }
+    catch (e) {
+      throw e;
+    }
+
+  }
+
+  async bulkWrite(query, operation, options) {
+
+    this._getCollection();
+    try {
+      return await this.collection.bulkWrite(query, operation, options);
+    }
+    catch (e) {
+      throw e;
+    }
+
+  }
+
   async insert(query, options) {
 
     this._getCollection();
