@@ -2,8 +2,6 @@ const Collection = require('./Collection.js');
 
 const Mongo = (function() {
 
-  var self = this;
-
   this.Collection = Collection;
   this.client = null;
   this.db = null;
