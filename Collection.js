@@ -31,7 +31,7 @@ class Collection {
   async find(query, opts) {
     this._getCollection();
     try {
-      if(opts.fields) {
+      if (opts && opts.fields) {
         const project = Object.assign({}, opts.fields); // Move "fields" to the projection
         delete opts.fields;
         return await this.collection.find(query, opts).project(project).toArray();
