@@ -129,6 +129,18 @@ class Collection {
 
   }
 
+  async aggregate(pipeline, options) {
+
+    this._getCollection();
+    try {
+      return await this.collection.aggregate(pipeline, options).toArray();
+    }
+    catch (e) {
+      throw e;
+    }
+
+  }
+
 }
 
 module.exports = Collection;
