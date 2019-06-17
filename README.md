@@ -44,7 +44,7 @@ async function connect() {
     Mongo.setDb(db);         // Set the db in the singleton.
     Mongo.setClient(client); // ..and the client.
 
-    doStuff();
+    await doStuff();
 
   }
   catch(err) {
