@@ -2,7 +2,7 @@
 
 This module acts as a singleton that you can use with `async`/`await` in a Meteor-like "synchronous" fashion to interact with MongoDB collections.   
 
-Intended usage is for CLI or "serverless" (Lambda/GCF) apps that need to interact with Meteor-based apps to generally make life easier while developing.
+Intended usage is for CLI or "serverless" (Lambda/GCF) apps that need to interact with Meteor-based apps to generally make life easier while developing. There are no projections, all the `find`s are automatically returned as arrays.
 
 I use this in my own internal projects so it's pretty simple, but feel free to contribute.
 
