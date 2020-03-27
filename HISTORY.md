@@ -1,3 +1,11 @@
+# 0.0.14
+
+- Added .count() (#3) (@tothradoslav)
+
+# 0.0.13
+
+- Added license
+
 # 0.0.12
 
 - Added aggregation (#1) (@tothradoslav)

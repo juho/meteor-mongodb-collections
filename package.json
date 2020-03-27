@@ -1,6 +1,6 @@
 {
   "name": "meteor-mongodb-collections",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "meteor-mongodb-collections",
   "main": "index.js",
   "scripts": {
