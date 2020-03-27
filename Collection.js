@@ -45,6 +45,16 @@ class Collection {
     }
   }
 
+  async count(query, opts) {
+    this._getCollection();
+    try {
+      return await this.collection.countDocuments(query, opts);
+    }
+    catch (e) {
+      throw e;
+    }
+  }
+
   async update(query, operation, options) {
 
     this._getCollection();
