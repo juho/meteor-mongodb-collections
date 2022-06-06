@@ -21,7 +21,14 @@ class Collection {
   async findOne(query, opts) {
     this._getCollection();
     try {
-      return await this.collection.findOne(query, opts);
+      if (opts && opts.fields) {
+        const project = Object.assign({}, opts.fields); // Move "fields" to the projection
+        delete opts.fields;
+        return await this.collection.findOne(query, opts).project(project)
+      }
+      else {
+        return await this.collection.findOne(query, opts)
+      }
     }
     catch (e) {
       throw e;
