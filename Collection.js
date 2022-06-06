@@ -134,11 +134,23 @@ class Collection {
 
   }
 
-  async remove(query, options) {
+  async deleteOne(query, options) {
 
     this._getCollection();
     try {
-      return await this.collection.remove(query, options);
+      return await this.collection.deleteOne(query, options);
+    }
+    catch (e) {
+      throw e;
+    }
+
+  }
+
+  async deleteMany(query, options) {
+
+    this._getCollection();
+    try {
+      return await this.collection.deleteMany(query, options);
     }
     catch (e) {
       throw e;
